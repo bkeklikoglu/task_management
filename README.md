@@ -8,8 +8,7 @@
 * MS Edge
 * Google Chrome
 * Mozilla Firefox
-
-tes
+ 
 
 ##Features
 * Task lists
