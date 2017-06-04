@@ -9,8 +9,7 @@
 * Google Chrome
 * Mozilla Firefox
 
-test
-test
+tes
 
 ##Features
 * Task lists
