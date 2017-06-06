@@ -8,7 +8,7 @@
 		<div id="footer-wrapper">
 			<div class="footer">
 				<div class="footer-in">
-					<a href="http://collabtive.o-dyn.de">Collabtive {$myversion}</a>
+					 Matesis
 				</div>
 			</div>
 		</div>
