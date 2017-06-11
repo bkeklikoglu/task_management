@@ -21,8 +21,8 @@ class company {
     {
         global $conn;
 
-        $ins1Stmt = $conn->prepare("INSERT INTO company (`company`, `contact`, `email`, `phone`, `mobile`, `url`, `address`, `zip`, `city`, `country`, `state`, `desc`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-        $ins1 = $ins1Stmt->execute(array($data['company'], $data['contact'], $data['email'], $data['phone'], $data['mobile'], $data['url'], $data['address'], $data['zip'], $data['city'], $data['country'], $data['state'], $data['desc']));
+        $ins1Stmt = $conn->prepare("INSERT INTO company (`company`, `contact`, `email`, `phone`, `mobile`, `url`, `address`, `zip`, `city`, `country`, `state`, `desc`, `contactTitle`, `contactMobile`, `contactEmail`,`contact2`, `contact2Title`, `contact2Mobile`, `contact2Email`,`contactMuh`, `contactMuhTitle`, `contactMuhMobile`, `contactMuhEmail` ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $ins1 = $ins1Stmt->execute(array($data['company'], $data['contact'], $data['email'], $data['phone'], $data['mobile'], $data['url'], $data['address'], $data['zip'], $data['city'], $data['country'], $data['state'], $data['desc'], $data['contactTitle'], $data['contactMobile'], $data['contactEmail'], $data['contact2'], $data['contact2Title'], $data['contact2Mobile'], $data['contact2Email'], $data['contactMuh'], $data['contactMuhTitle'], $data['contactMuhMobile'], $data['contactMuhEmail']));
         $insid = $conn->lastInsertId();
 
         if ($ins1) {

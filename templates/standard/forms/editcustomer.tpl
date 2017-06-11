@@ -55,7 +55,7 @@
 			<div class="row"><label for="zip">{$langfile.zip}:</label><input type="text" class="text" name="zip" id="zip" realname="{$langfile.zip}" value="{$customer.zip}" /></div>
 			<div class="row"><label for="city">{$langfile.city}:</label><input type="text" class="text" name="city" id="city" realname="{$langfile.city}" value="{$customer.city}" /></div>
 			<div class="row"><label for="country">{$langfile.country}:</label><input type="text" class="text" name="country" id="country" realname="{$langfile.country}" value="{$customer.country}" /></div>
-			<div class="row"><label for="state">{$langfile.state}:</label><input type="text" class="text" name="state" id="state" realname="{$langfile.state}" value="{$customer.state}" /></div>
+			<div class="row" style="visibility: hidden"><label for="state">{$langfile.state}:</label><input type="text" class="text" name="state" id="state" realname="{$langfile.state}" value="{$customer.state}" /></div>
 
 			<div class="clear_both_b"></div>
 

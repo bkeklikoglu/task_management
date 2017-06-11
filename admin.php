@@ -541,7 +541,18 @@ elseif ($action == "addcust") {
         'city' => getArrayVal($_POST, "city"),
         'country' => getArrayVal($_POST, "country"),
         'state' => getArrayVal($_POST, "state"),
-        'desc' => getArrayVal($_POST, "desc")
+        'desc' => getArrayVal($_POST, "desc"),
+        'contactTitle' => getArrayVal($_POST, "contactTitle"),
+        'contactMobile' => getArrayVal($_POST, "contactMobile"),
+        'contactEmail' => getArrayVal($_POST, "contactEmail"),
+        'contact2' => getArrayVal($_POST, "contact2"),
+        'contact2Title' => getArrayVal($_POST, "contact2Title"),
+        'contact2Mobile' => getArrayVal($_POST, "contact2Mobile"),
+        'contact2Email' => getArrayVal($_POST, "contact2Email"),
+        'contactMuh' => getArrayVal($_POST, "contactMuh"),
+        'contactMuhTitle' => getArrayVal($_POST, "contactMuhTitle"),
+        'contactMuhMobile' => getArrayVal($_POST, "contactMuhMobile"),
+        'contactMuhEmail' => getArrayVal($_POST, "contactMuhEmail")
         );
     $add = $companyObj->add($data);
     if ($add)
