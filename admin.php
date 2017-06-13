@@ -369,6 +369,7 @@ elseif ($action == "projects") {
     $i = 0;
     $users = $user->getAllUsers(1000000);
     $customers = $companyObj->getAllCompanies();
+    $cities = $companyObj->getAllCities();
 
     $template->assign("customers", $customers);
     $template->assign("users", $users);
@@ -482,6 +483,7 @@ elseif ($action == "addpro") {
     $template->assign("title", $title);
     $template->assign("classes", $classes);
     $allcust = $companyObj->getAllCompanies();
+    $cities = $companyObj->getAllCities();
     // $clopros = $project->getProjects(0, 10000);
     /* $i = 0;
     $users = $user->getAllUsers(1000000);
@@ -552,7 +554,9 @@ elseif ($action == "addcust") {
         'contactMuh' => getArrayVal($_POST, "contactMuh"),
         'contactMuhTitle' => getArrayVal($_POST, "contactMuhTitle"),
         'contactMuhMobile' => getArrayVal($_POST, "contactMuhMobile"),
-        'contactMuhEmail' => getArrayVal($_POST, "contactMuhEmail")
+        'contactMuhEmail' => getArrayVal($_POST, "contactMuhEmail"),
+        'billInfo' => getArrayVal($_POST, "billInfo"),
+        'projectSize' => getArrayVal($_POST, "projectSize")
         );
     $add = $companyObj->add($data);
     if ($add)

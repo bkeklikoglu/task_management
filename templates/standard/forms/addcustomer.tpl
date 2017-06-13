@@ -5,6 +5,14 @@
     <form novalidate class="main" method="post" action="admin.php?action=addcust" {literal}onsubmit="return validateCompleteForm(this);" {/literal}>
         <fieldset>
             <div class="row">
+                 <label for="projectSize">Proje Ölçeği:</label>
+            <select name="projectSize" id="projectSize" >						 
+            <option value = "1">Küçük</option>
+            <option value = "2" selected>Orta</option> 
+            <option value = "3" >Büyük</option> 
+            </select>
+            </div>
+            <div class="row">
                 <label for="company">{#company#}:</label>
                 <input type="text" class="text" name="company" id="company" required="1" realname="{#company#}" />
             </div>
@@ -28,6 +36,11 @@
                 <label for="web">{#url#}:</label>
                 <input type="text" class="text" name="web" id="web" realname="{#url#}" />
             </div>
+            
+            <div class="row">
+                <label for="billInfo">Fatura Bilgileri:</label>
+                <input type="text" class="text" name="billInfo" id="billInfo" realname="Fatura Bilgileri" />
+            </div>
 
             <div class="clear_both_b"></div>            
 
@@ -36,11 +49,16 @@
                 <input type="text" class="text" name="country" id="country" realname="{#country#}" />
             </div>
             
-            <div class="row">
-                <label for="city">{#city#}:</label>
-                <input type="text" class="text" name="city" id="city" realname="{#city#}" />
-            </div>
-
+            <div class = "row">
+				<label>{#customer#}:</label>
+				<select name="company" id="company">
+					<option value="-1">{#chooseone#}</option>
+					{section name=customer loop=$customers}
+						<option value = "{$customers[customer].ID}">{$customers[customer].company}</option>
+					{/section}
+				</select>
+			</div>
+                 
            <div class="row">
                 <label for="address">{#address#}:</label>
                 <input type="text" class="text" name="address" id="address" realname="{#address#}" />
@@ -60,58 +78,58 @@
             
             <div class="row">
                 <label for="contactTitle">{#contactperson#} Ünvan:</label>
-                <input type="text" class="text" name="contactTitle" id="contactTitle" required="1" realname="{#contactperson#} Ünvan" />
+                <input type="text" class="text" name="contactTitle" id="contactTitle" realname="{#contactperson#} Ünvan" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">{#contactperson#} Mobile:</label>
+                <label for="contactMobile">{#contactperson#} Mobile:</label>
                 <input type="text" class="text" name="contactMobile" id="contactMobile" realname="{#contactperson#} Mobile" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">{#contactperson#} Email:</label>
+                <label for="contactEmail">{#contactperson#} Email:</label>
                 <input type="text" class="text" name="contactEmail" id="contactEmail" realname="{#contactperson#} Email" />
             </div>
             
             <div class="clear_both_b"></div>
             <div class="row">
-                <label for="contact">{#contactperson#}2:</label>
-                <input type="text" class="text" name="contact2" id="contact2" required="1" realname="{#contactperson#}2" />
+                <label for="contact2">{#contactperson#}2:</label>
+                <input type="text" class="text" name="contact2" id="contact2"  realname="{#contactperson#}2" />
             </div>
             
              <div class="row">
-                <label for="contactTitle">{#contactperson#}2 Ünvan:</label>
+                <label for="contact2Title">{#contactperson#}2 Ünvan:</label>
                 <input type="text" class="text" name="contact2Title" id="contact2Title"  realname="{#contactperson#} Ünvan 2" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">{#contactperson#}2 Mobile:</label>
+                <label for="contact2Mobile">{#contactperson#}2 Mobile:</label>
                 <input type="text" class="text" name="contact2Mobile" id="contact2Mobile" realname="{#contactperson#} Mobile 2" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">{#contactperson#}2 Email:</label>
+                <label for="contact2Email">{#contactperson#}2 Email:</label>
                 <input type="text" class="text" name="contact2Email" id="contact2Email" realname="{#contactperson#} Email 2" />
             </div>
             
             <div class="clear_both_b"></div>
             <div class="row">
-                <label for="contact">Muhasebe Yetkilisi:</label>
-                <input type="text" class="text" name="contactMuh" id="contactMuh" required="1" realname="Muhasebe Yetkilisi" />
+                <label for="contactMuh">Muhasebe Yetkilisi:</label>
+                <input type="text" class="text" name="contactMuh" id="contactMuh"  realname="Muhasebe Yetkilisi" />
             </div>
             
              <div class="row">
-                <label for="contactTitle">Muhasebe Yetk. Ünvan:</label>
+                <label for="contactMuhTitle">Muhasebe Yetk. Ünvan:</label>
                 <input type="text" class="text" name="contactMuhTitle" id="contactMuhTitle"  realname="Muhasebe Yetkilisi Ünvan" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">Muhasebe Yetk. Mobile:</label>
+                <label for="contactMuhMobile">Muhasebe Yetk. Mobile:</label>
                 <input type="text" class="text" name="contactMuhMobile" id="contactMuhMobile" realname="Muhasebe Yetkilisi Mobile" />
             </div>
             
             <div class="row">
-                <label for="contactTitle">Muhasebe Yetk. Email:</label>
+                <label for="contactMuhEmail">Muhasebe Yetk. Email:</label>
                 <input type="text" class="text" name="contactMuhEmail" id="contactMuhEmail" realname="Muhasebe Yetkilisi Email" />
             </div>
 
